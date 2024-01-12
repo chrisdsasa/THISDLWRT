@@ -2,16 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>404</title>
-    <link rel="stylesheet" href="/Display/css/404.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon " type="images/x-icon" href="img/chrisk.jpg">
+    <style>
+        .fullscreen-text {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #bd0af8;
+            background-color: black;
+            font-size: 6em;
+            z-index: -1; 
+        }
+
+
+
+        .w{
+            color:#ffffd2;
+        }
+        @media screen and (min-width: 1920px){
+            .big{
+                font-size: 34cm;
+            }
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1920px){
+            .big{
+                font-size: 18cm;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .big{
+                font-size: 6cm;
+            }
+        }
+
+        @media screen  and (max-width: 768px) {
+            .big{
+                font-size: 3cm;
+            }
+        }
+
+
+    </style>
+    <title>On Air</title>
 </head>
 <body>
-  <div class="container">
-    <h1>404</h1>
-    <p>Oops! Page not found<span class="emoji">😅</span></p>
-    <p>Looks like you've ventured into the unknown.</p>
-    <p>Don't worry, it happens to the best of us.</p>
-    <a class="button" href="/">Go Back Home</a>
-  </div>
+    <div class="fullscreen-text"><div class="big">404</div></div> 
 </body>
 </html>
