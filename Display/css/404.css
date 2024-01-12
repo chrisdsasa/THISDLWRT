@@ -1,0 +1,44 @@
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 120px;
+    color: #a044ff;
+    margin: 0;
+}
+
+p {
+    font-size: 36px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.emoji {
+    font-size: 100px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #a044ff;
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #a044ff;
+}

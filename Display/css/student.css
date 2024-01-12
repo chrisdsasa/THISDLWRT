@@ -1,0 +1,211 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.gradient-background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 400% 400%;
+    opacity: 0.33;
+    animation: gradientShift 20s ease infinite;
+    z-index: -1;
+}
+
+.dynamic-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #6a3093, #a044ff, #6e45e2, #7d5fff);
+    background-size: 400% 400%;
+    position: relative;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 60px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #ff5722;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav li {
+        margin: 10px 0;
+    }
+}
+.spacer {
+    padding: 1.8%;
+}
+
+.tunnel {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-section {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-section:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ... previous styles ... */
+
+.details-section {
+    background-color:rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    padding: 20px;
+    margin: 20px auto  ; /* Centering the container with automatic horizontal margins */
+    max-width: 80%; /* Maximum width of the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.details-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details-section ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.details-section ul li {
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.footer {
+    background-color: #6e1fa7;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-section {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.footer .footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer .footer-section.links ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+}
+
+.footer .footer-section.links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-section.links ul li a:hover {
+    color: #ff5722;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
+
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .footer-section.links ul {
+        flex-direction: column;
+    }
+    .footer .footer-section.links ul li {
+        margin-bottom: 10px;
+    }
+}
