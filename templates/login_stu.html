@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>社会实践时长管理系统</title>
+    <link rel="stylesheet" href="../static/css/login_stu.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="form-box">
+        <div class="register-box hidden">
+            <h1>register</h1>
+            <input type="email" placeholder="学校邮箱" autocomplete="off">
+            <input type="password" placeholder="密码" autocomplete="off">
+            <input type="password" placeholder="确认密码" autocomplete="off">
+            <input type="text" placeholder="验证码" autocomplete="off">
+            <div class="code">发送</div>
+            <button>注册</button>
+        </div>
+        
+        <div class="login-box">
+            <h1>login</h1>
+                <input id="numdestu" type="text" placeholder="学号" name="id" autocomplete="off">
+                <input id="passwd" type="password" placeholder="密码" name="pwd" autocomplete="off">
+                <button id="loginbtn">登录</button>
+            <p><a href="">忘记密码?</a></p>
+        </div>
+    </div>
+
+    <div class="con-box left">
+        <h2>欢迎来到<span>稻香湖学校</span></h2>
+        <img src="../static/imgs/logo.png" alt="lg" class="foto">
+        <p>已有账号</p>
+        <button id="login">去登录</button>
+    </div>
+
+    <div class="con-box right">
+        <h2>欢迎来到<span>稻香湖学校</span></h2>
+        <p>快来看看你的<span>社会实践时长</span>吧</p>
+        <img src="../static/imgs/logo.png" alt="lg" class="foto">
+        <p>没有账号？</p>
+        <button id="register">去注册</button>
+    </div>
+    
+</div>
+<script>
+
+</script>
+
+<script type="text/javascript" src="../static/js/axios.min.js"></script>
+<script type="text/javascript" src="../static/js/login_stu.js"></script>
+</body>
+</html>  

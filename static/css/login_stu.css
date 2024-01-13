@@ -1,5 +1,4 @@
 *{
-    /* 初始化 */
     margin: 0;
     padding: 0;
 }
@@ -10,164 +9,206 @@ a:hover {color:#ffff00;}
 a:active {color:#ffffff;}  
 
 body{
-    /* 100%窗口高度 */
-    height: 100vh;
-    /* 弹性布局 水平+垂直居中 */
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    /* 渐变背景 */
     background: linear-gradient(200deg,#f3e7e9,#e3eeff);
 }
 .container{
-    background-color: #ffffff;
+    position: relative;
     width: 650px;
     height: 415px;
     border-radius: 5px;
-    /* 阴影 */
     box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-    /* 相对定位 */
-    position: relative;
+    background-color: #fff;
 }
+
 .form-box{
-    /* 绝对定位 */
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: -10%;
-    left: 5%;
-    background-color: #6e1fa7;
+    left: 3%;
+    z-index: 2;
     width: 320px;
     height: 500px;
     border-radius: 5px;
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    /* 动画过渡 加速后减速 */
+    background-color: #6e1fa7;
     transition: 0.5s ease-in-out;
 }
-.register-box,.login-box{
-    /* 弹性布局 垂直排列 */
+
+.register-box,
+.login-box{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
 .hidden{
     display: none;
     transition: 0.5s;
 }
-h1{
-    text-align: center;
+
+.form-box .register-box h1,
+.form-box .login-box h1{
     margin-bottom: 25px;
-    /* 大写 */
-    text-transform: uppercase;
     color: #fff;
-    /* 字间距 */
-    letter-spacing: 5px;
     font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
     text-shadow:#5b1690;
 }
-input{
-    background-color: transparent;
+
+.form-box .register-box input,
+.form-box .login-box input{
+    margin: 8px 0;
+    padding: 10px 0;
     width: 70%;
     color: #fff;
-    border: none;
-    /* 下边框样式 */
-    border-bottom: 1px solid rgba(255,255,255,0.4);
-    padding: 10px 0;
     text-indent: 10px;
-    margin: 8px 0;
     font-size: 14px;
     letter-spacing: 2px;
+    border: none;
+    border-bottom: 1px solid #a262ad80;
+
+    background-color: transparent;
 }
-input::placeholder{
+
+.form-box .register-box input::placeholder,
+.form-box .login-box input::placeholder{
     color: #fff;
 }
-input:focus{
-    color: #3d075f;
+
+.form-box .register-box input:focus,
+.form-box .login-box input:focus{
     outline: none;
-    border-bottom: 1px solid #a262ad80;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+
     transition: 0.5s;
 }
-input:focus::placeholder{
+
+.form-box .register-box input:focus::placeholder,
+.form-box .login-box input:focus::placeholder{
     opacity: 0;
 }
-.form-box button{
-    width: 70%;
-    margin-top: 35px;
-    background-color: #f6f6f6;
-    outline: none;
-    border-radius: 8px;
-    padding: 13px;
+
+.form-box .register-box .code {
+    position: absolute;
+    top: 230px;
+    right: 55px;
+    height: 25px;
+    width: 13%;
+    font-size: 12px;
     color: #6e1fa7;
     letter-spacing: 2px;
+    text-align: center;
+    line-height: 26px;
+    outline: none;
     border: none;
+    border-radius: 2px;
+    background-color: #f6f6f6;
     cursor: pointer;
 }
-.form-box button:hover{
-    background-color: #6e1fa7;
+
+.form-box .register-box .code:hover{
     color: #f6f6f6;
+    background-color: #6e1fa7;
     transition: background-color 0.5s ease;
 }
+
+
+.form-box .register-box button,
+.form-box .login-box button {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 13px;
+    width: 70%;
+    color: #6e1fa7;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.form-box .register-box button:hover,
+.form-box .login-box button:hover{
+    color: #f6f6f6;
+    background-color: #6e1fa7;
+    transition: background-color 0.5s ease;
+}
+
 .con-box{
-    width: 50%;
-    /* 弹性布局 垂直排列 居中 */
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* 绝对定位 居中 */
-    position: absolute;
     top: 50%;
+    width: 50%;
     transform: translateY(-50%);
 }
+
 .con-box.left{
     left: -2%;
 }
+
 .con-box.right{
     right: -2%;
 }
+
 .con-box h2{
+    margin-bottom: 4px;
     color: #8e9aaf;
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 4px;
 }
+
 .con-box p{
+    color: #8e9aaf;
     font-size: 12px;
     letter-spacing: 2px;
-    color: #8e9aaf;
     text-align: center;
 }
+
 .con-box span{
     color: #5b1690;
 }
+
 .con-box img{
+    margin: 40px 0;
     width: 150px;
     height: 150px;
     opacity: 0.9;
-    margin: 40px 0;
 }
+
 .con-box button{
     margin-top: 3%;
-    background-color: #fff;
-    color: #6e1fa7; 
-    border: 1px solid #6e1fa7;
     padding: 6px 10px;
-    border-radius: 5px;
+    color: #6e1fa7; 
     letter-spacing: 1px;
     outline: none;
+    border: 1px solid #6e1fa7;
+    border-radius: 5px;
+    background-color: #fff;
     cursor: pointer;
 }
+
 .con-box button:hover{
     background-color: #d3b7d8;
     color: #fff;
 }
 
 .foto{
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
