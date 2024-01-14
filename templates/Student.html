@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>稻香湖学校公益时长</title>
-    <link rel="stylesheet" href="/Display/css/student.css">
+    <link rel="stylesheet" href="/static/css/student.css">
+    
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-brand">
-            <img src="/Display/assets/logo3.png" alt="Logo" class="navbar-logo">
+            <img src="/static/imgs/logo3.png" alt="Logo" class="navbar-logo">
         </div>
     </nav>
 
@@ -24,15 +25,39 @@
             <div class="time-section" onclick="showDetails(3)">Grade11</div>
             <div class="time-section" onclick="showDetails(4)">Grade12</div>
         </div>
-        <div class="details-section" id="detailsGrade09">
+        <div class="details-section" id="detailsGrade09" style="display:none">
             <h3>Grade 9 Activities</h3>
             <ul>
-                <li>Community Service Project A</li>
-                <li>Environmental Initiative B</li>
-                <li>Charity Event C</li>
+                <li>
+                    <div class="status"><button id="myButton"></button>
+                    </div>
+                    <div class="type">type</div>
+                    <div class="start-time">start-time</div>
+                    <div class="endup-time">end</div>
+                    <div class="duration">100hr</div>
+                    <div class="prove"></div>
+                </li>
+                <li>
+                    <div class="status"><button id="myButton"></button>
+                    </div>
+                    <div class="type">type</div>
+                    <div class="start-time">start-time</div>
+                    <div class="endup-time">end</div>
+                    <div class="duration">100hr</div>
+                    <div class="prove"></div>
+                </li>
+                <li>
+                    <div class="status"><button id="myButton"></button>
+                    </div>
+                    <div class="type">type</div>
+                    <div class="start-time">start-time</div>
+                    <div class="endup-time">end</div>
+                    <div class="duration">100hr</div>
+                    <div class="prove"></div>
+                </li>
             </ul>
         </div>
-        <div class="details-section" id="detailsGrade10">
+        <div class="details-section" id="detailsGrade10" style="display:none">
             <h3>Grade 10 Activities</h3>
             <ul>
                 <li>Community Clean-up X</li>
@@ -40,7 +65,7 @@
                 <li>Local Library Assistance Z</li>
             </ul>
         </div>
-        <div class="details-section" id="detailsGrade11">
+        <div class="details-section" id="detailsGrade11" style="display:none">
             <h3>Grade 11 Activities</h3>
             <ul>
                 <li>Senior Home Entertainment M</li>
@@ -48,7 +73,7 @@
                 <li>Health Awareness Campaign O</li>
             </ul>
         </div>
-        <div class="details-section" id="detailsGrade12">
+        <div class="details-section" id="detailsGrade12" style="display:none">
             <h3>Grade 12 Activities</h3>
             <ul>
                 <li>International Aid Fundraiser G</li>
@@ -56,21 +81,31 @@
                 <li>Student Tutoring Services J</li>
             </ul>
         </div>
+
+        <h2 class="chart-heading">Types</h2>
+        <div class="programming-stats">
+          <div class="chart-container">
+            <canvas class="my-chart"></canvas>
+          </div>
+    
+          <div class="details">
+            <ul></ul>
+          </div>
+        </div>
     </div>
+
 
 
     <footer class="footer">
         <div class="footer-content">
-            <!-- 可在此处添加页脚内容 -->
         </div>
         <div class="footer-bottom">
             &copy; THISDLtimecount.com | Designed by <a href="http://studio.krypoto.top" class="hooverf">krypoto</a>
         </div>
     </footer>
 
-    <script>
 
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/student.js"></script>
 </body>
 </html>

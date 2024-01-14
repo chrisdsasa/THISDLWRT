@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>canvas</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="workbench">
+
+</div>
+
+<div id="canvas">
+
+</div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script type="text/javascript">
+
+
+    (function () {
+
+        let canvasWidth = 600;
+        let canvasValue = 80;
+        let canvasValueSize = 30;
+
+        let mainPieCenter = ["45%", "50%"];         //  圆心
+        let mainPieRadius = ["40%", "55%"];         //  半径
+        let line1Radius = ['60%', '61%'];           //  左侧线条
+        let line2Radius = ['60%', '61%'];           //  右侧线条
+        let line3Radius = ['60%', '61%'];           //  下方线条
+        let innerRingRadius = ['37%', '40%'];       //  最内层圈半径
+
+
+        $("#workbench").append(`<span class="workbenchCanvasValueBox" style="display: none; font-size: ${canvasValueSize}px;">${canvasValue}</span>`)
+        let valueBox = $("#workbench .workbenchCanvasValueBox");
+        let valueBoxWidth = Math.ceil(valueBox.width());
+        console.log(valueBoxWidth, 'testTxt')
+        $("#workbench .workbenchCanvasValueBox").remove();
+
+
+        var myChart = echarts.init(document.getElementById('canvas'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '',
+                subtext: '',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b} : {c} ({d}%)'
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                top: 'center',
+                right: 'right',
+                data: ["正常数量", "异常数量"],
+
+            },
+            
+            //  添加 数值,因为有中心点偏移,单独处理 数值
+            graphic: [{
+                type: 'text',
+                left: `${(canvasWidth * 0.45) - (valueBoxWidth / 2)}`,
+                top: 'middle',
+                style: {
+                    text: canvasValue,
+                    textAlign: 'center',
+                    fill: '#1E7CE8', //文字的颜色
+                    fontSize: canvasValueSize,
+                    lineHeight: canvasValueSize,
+                }
+            }],
+
+            series: [
+                {
+                    name: '主显示盘',
+                    type: 'pie',
+                    center: mainPieCenter,
+                    radius: mainPieRadius,
+                    data: [{value: 50, name: '正常数量'}, {value: 50, name: '异常数量'},],
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    label: {
+                        alignTo: 'edge',
+                        formatter: '{d}%',
+                        minMargin: 5,
+                        edgeDistance: 10,
+                        lineHeight: 15,
+                        rich: {
+                            time: {
+                                fontSize: 10, color: '#999'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        length: 15,
+                        length2: 30,
+                        maxSurfaceAngle: 80,
+                        lineStyle: {
+                            color: "#ff0000"  // 指示线颜色
+                        }
+                    },
+                },
+
+                {
+                    name:'左侧线',
+                    type:'pie',
+                    radius: line1Radius,
+                    center: mainPieCenter,
+                    label: {
+                        show: false,
+                    },
+                    startAngle: 90,
+                    tooltip: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '20',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    clockWise: false,
+                    animation: false,
+                    data:[
+                        {   name:'',
+                            value: 50,
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgb(255,0,0)'
+                                }
+                            }
+                        },
+                        {
+                            value: 180,
+                            itemStyle: {
+                                normal: {
+                                    color: 'transparent'
+                                }
+                            }
+                        }
+
+                    ]
+                },
+
+                {
+                    name:'右侧线',
+                    type:'pie',
+                    radius: line2Radius,
+                    center: mainPieCenter,
+                    label: {
+                        show: false,
+                    },
+                    startAngle: 330,
+                    tooltip: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '20',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    clockWise: false,
+                    animation: false,
+                    data:[
+                        {   name:'',
+                            value: 50,
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgb(255,122,0)'
+                                }
+                            }
+                        },
+                        {
+                            value: 180,
+                            itemStyle: {
+                                normal: {
+                                    color: 'transparent'
+                                }
+                            }
+                        }
+
+                    ]
+                },
+
+                {
+                    name:'下方线',
+                    type:'pie',
+                    radius: line3Radius,
+                    center: mainPieCenter,
+                    label: {
+                        show: false,
+                    },
+                    startAngle: 210,
+                    tooltip: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '20',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    clockWise: false,
+                    animation: false,
+                    data:[
+                        {   name:'',
+                            value: 50,
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgb(50,197,233)'
+                                }
+                            }
+                        },
+                        {
+                            value: 180,
+                            itemStyle: {
+                                normal: {
+                                    color: 'transparent'
+                                }
+                            }
+                        }
+
+                    ]
+                },
+
+                {
+                    name:'最内层圈',
+                    type:'pie',
+                    radius: innerRingRadius,
+                    center: mainPieCenter,
+                    label: {
+                        show: false,
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    animation: false,
+                    data:[
+                        {   name:'',
+                            value: 0,
+                            itemStyle: {
+                                normal: {
+                                    color: '#188FA999'
+                                }
+                            }
+                        }
+                    ]
+                },
+
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    })()
+</script>
+</body>
+</html>
