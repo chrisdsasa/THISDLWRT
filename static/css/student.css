@@ -5,6 +5,7 @@ body, html {
     overflow-x: hidden;
 }
 
+
 .gradient-background {
     width: 100%;
     height: 100vh;
@@ -55,6 +56,11 @@ body, html {
     align-items: center;
 }
 
+.logout{
+    text-decoration: none;
+    color: #fff
+}
+
 .navbar-logo {
     height: 60px;
 }
@@ -75,10 +81,11 @@ body, html {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .navbar-nav a:hover {
-    color: #ff5722;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -120,13 +127,13 @@ body, html {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* ... previous styles ... */
+
 
 .details-section {
-    background-color:rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    background-color:rgba(255, 255, 255, 0.8); 
     padding: 20px;
-    margin: 20px auto  ; /* Centering the container with automatic horizontal margins */
-    max-width: 80%; /* Maximum width of the container */
+    margin: 20px auto  ; 
+    max-width: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -190,6 +197,7 @@ body, html {
   
   .chart-container {
     width: 200px;
+    display: flex;
   }
   
   .programming-stats {
@@ -204,6 +212,8 @@ body, html {
     padding: 8px 32px;
     color: #023047;
     transition: all 400ms ease;
+    background-color: #ffffffe0;
+    
   }
   
   .programming-stats:hover {
