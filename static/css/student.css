@@ -187,7 +187,7 @@ body, html {
 }
 
 .chart-heading {
-    margin-top: 230px;
+    margin-top: 30px;
     font-family: "Rubik", sans-serif;
     color: #023047;
     text-transform: uppercase;
@@ -236,6 +236,25 @@ body, html {
     font-weight: 700;
     color: #e63946;
   }
+
+.submit{
+    margin-top: 30px;
+    background-color:rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    margin: 20px auto  ; 
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.innersubmit{
+    background-color:rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    margin: 5px auto ; 
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .footer {
     background-color: #6e1fa7;
