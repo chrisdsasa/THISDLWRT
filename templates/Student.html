@@ -33,7 +33,7 @@
             <h3>Grade 9 Activities</h3>
             <ul>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -42,7 +42,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -51,7 +51,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -65,7 +65,7 @@
             <h3>Grade 10 Activities</h3>
             <ul>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -74,7 +74,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -83,7 +83,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -97,7 +97,7 @@
             <h3>Grade 11 Activities</h3>
             <ul>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -106,16 +106,16 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
                     <div class="endup-time">end</div>
                     <div class="duration">100hr</div>
-                    <div class="prove"></div> 
+                    <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -129,7 +129,7 @@
             <h3>Grade 12 Activities</h3>
             <ul>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -138,7 +138,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -147,7 +147,7 @@
                     <div class="prove"></div>
                 </li>
                 <li>
-                    <div class="status"><button id="myButton"></button>
+                    <div class="status"><button class="myButton"></button>
                     </div>
                     <div class="type">type</div>
                     <div class="start-time">start-time</div>
@@ -167,12 +167,63 @@
             <ul></ul>
           </div>
         </div>
-        <div class="submit">
-            <div class="innersubmit">
 
-            </div>
+        <div class="innersubmit">
+            <form id="projectForm" class="form-styled">
+                <div class="form-row">
+                    <label for="grade">年级:</label>
+                    <select id="grade" name="grade" class="form-control">
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+        
+                <div class="form-row">
+                    <label for="category">类别:</label>
+                    <select id="category" name="category" class="form-control">
+                        <option value="1">Community Service</option>
+                        <option value="2">Independent Research</option>
+                        <option value="3">Community Orcanizations</option>
+                        <option value="4">Career Development</option>
+                        <option value="5">Field Work</option>
+                    </select>
+                </div>
+        
+                <div class="form-row">
+                    <label for="title">标题:</label>
+                    <input type="text" id="title" name="title" class="form-control">
+                </div>
+        
+                <div class="form-row">
+                    <label for="startDate">开始时间:</label>
+                    <input type="date" id="startDate" name="startDate" class="form-control">
+                </div>
+        
+                <div class="form-row">
+                    <label for="endDate">结束时间:</label>
+                    <input type="date" id="endDate" name="endDate" class="form-control">
+                </div>
+        
+                <div class="form-row">
+                    <label for="duration">时长:</label>
+                    <input type="number" id="duration" name="duration" class="form-control">
+                </div>
+        
+                <div class="form-row">
+                    <label for="fileUpload">文件上传:</label>
+                    <input type="file" id="fileUpload" name="fileUpload" class="form-control">
+                </div>
+        
+                <div class="form-row">
+                    <button type="submit" class="btn-submit">提交</button>
+                </div>
+            </form>
         </div>
+        
     </div>
+
 
 
 

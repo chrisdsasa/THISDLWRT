@@ -165,7 +165,7 @@ body, html {
 
   }
 
-#myButton {
+.myButton {
     background-color: rgb(219, 230, 22); 
     color: white; 
     border: none; 
@@ -314,4 +314,65 @@ body, html {
     .footer .footer-section.links ul li {
         margin-bottom: 10px;
     }
+}
+
+.innersubmit {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid #e0e0e0;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ad31ef;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #b65ff4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #802ddf;
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    background-color: #f4f4f4;
 }

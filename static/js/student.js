@@ -17,11 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
-document.getElementById('myButton').addEventListener('click', function() {
-    this.style.backgroundColor = 'rgb(60, 203, 60)'; 
-});
-
-document.getElementById('myButton').addEventListener('Doubleclick', function() {
+document.getElementsByClassName('myButton').addEventListener('click', function() {
     this.style.backgroundColor = 'rgb(60, 203, 60)'; 
 });
 
@@ -65,3 +61,11 @@ const chartData = {
   };
   
   populateUl();
+
+  document.getElementById('projectForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    // 处理表单数据
+    console.log(Array.from(formData.entries()));  //测试
+    // 提交表单数据
+});
